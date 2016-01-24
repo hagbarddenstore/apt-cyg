@@ -80,14 +80,6 @@ OPTIONS
     Display version and exit.
 "
 
-version="\
-Sage version 1
-
-The MIT License (MIT)
-
-Copyright (c) 2005-9 Stephen Jungels
-"
-
 function wget {
   if command wget -h &>/dev/null
   then
@@ -604,7 +596,7 @@ do
     ;;
 
     --version)
-      printf "$version"
+      echo 'Sage version 1.0.0'
       exit
     ;;
 
