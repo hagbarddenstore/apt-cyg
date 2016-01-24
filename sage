@@ -1,44 +1,14 @@
 #!/bin/bash
-# apt-cyg: install tool for Cygwin similar to debian apt-get
-#
-# The MIT License (MIT)
-#
-# Copyright (c) 2013 Trans-code Design
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-# THE SOFTWARE.
-
-if [ ${BASH_VERSINFO}${BASH_VERSINFO[1]} -lt 42 ]
-then
-  echo 'Bash version 4.2+ required'
-  exit
-fi
-
 usage="\
 NAME
-  apt-cyg - package manager utility
+  Sage - package manager utility
 
 SYNOPSIS
-  apt-cyg [operation] [options] [targets]
+  sage [operation] [options] [targets]
 
 DESCRIPTION
-  apt-cyg is a package management utility that tracks installed packages on a
-  Cygwin system. Invoking apt-cyg involves specifying an operation with any
+  Sage is a package management utility that tracks installed packages on a
+  Cygwin system. Invoking Sage involves specifying an operation with any
   potential options and targets to operate on. A target is usually a package
   name, file name, URL, or a search string. Targets can be provided as command
   line arguments.
@@ -111,7 +81,7 @@ OPTIONS
 "
 
 version="\
-apt-cyg version 1
+Sage version 1
 
 The MIT License (MIT)
 
@@ -488,7 +458,7 @@ function apt-install {
         echo Package $package is already installed, skipping
         continue
       fi
-      apt-cyg install --noscripts $package || (( wr++ ))
+      sage install --noscripts $package || (( wr++ ))
     done
   fi
   if (( wr ))
@@ -563,7 +533,7 @@ function apt-remove {
   rm setup/"$pkg".lst
   if [ $esn = 1 ]
   then
-    warn apt-cyg cannot remove package $pkg, exiting
+    warn Sage cannot remove package $pkg, exiting
     exit 1
   fi
 

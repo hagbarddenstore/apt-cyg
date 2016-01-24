@@ -1,16 +1,13 @@
-apt-cyg
-=======
+Sage
+====
 
-apt-cyg is a Cygwin package manager. It includes a command-line installer for
+Sage is a Cygwin package manager. It includes a command-line installer for
 Cygwin which cooperates with Cygwin Setup and uses the same repository.
 
-[github.com/transcode-open/apt-cyg][1]
+[![bountysource][2]][1]
 
-[![bountysource][3]][2]
-
-[1]:https://github.com/transcode-open/apt-cyg
-[2]:https://www.bountysource.com/teams/svnpenn
-[3]:https://api.bountysource.com/badge/team?team_id=114003&style=raised
+[1]:https://www.bountysource.com/teams/svnpenn
+[2]:https://api.bountysource.com/badge/team?team_id=114003&style=raised
 
 Operations
 ----------
@@ -67,11 +64,11 @@ searchall
 Quick start
 -----------
 
-apt-cyg is a simple script. To install:
+Sage is a simple script. To install:
 
-    lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg
-    install apt-cyg /bin
+    lynx -source rawgit.com/svnpenn/sage/master/sage > sage
+    install sage /bin
 
-Example use of apt-cyg:
+Example use of Sage:
 
-    apt-cyg install nano
+    sage install nano
